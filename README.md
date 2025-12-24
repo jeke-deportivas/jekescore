@@ -1,3 +1,8 @@
+[![CI](https://github.com/jeke-deportivas/jekescore/actions/workflows/ci.yml/badge.svg)](https://github.com/jeke-deportivas/jekescore/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/jekescore)](https://pypi.org/project/jekescore/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
+
 # JekeScore
 
 Scraper minimalista para obtener datos de tiros (shotmap) de Sofascore.
