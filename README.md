@@ -7,42 +7,13 @@
 
 Scraper minimalista para obtener datos de tiros (shotmap) de Sofascore.
 
-## Requisitos
-
-- Python 3.13+
-- pyenv (recomendado)
-
 ## Instalación
 
-### 1. Configurar Python con pyenv
-
 ```bash
-# Instalar Python 3.13.11
-pyenv install 3.13.11
-
-# Clonar el repositorio
-git clone https://github.com/jekedelasdeportivas/jekescore.git
-cd jekescore
-
-# pyenv usará automáticamente la versión del archivo .python-version
-python --version  # Debería mostrar 3.13.11
+pip install jekescore
 ```
 
-### 2. Crear entorno virtual
-
-```bash
-# Crear venv
-python -m venv venv
-
-# Activar venv
-# Linux/macOS:
-source venv/bin/activate
-# Windows:
-venv\Scripts\activate
-
-# Instalar dependencias
-pip install -e ".[dev]"
-```
+Requiere Python 3.13+
 
 ## Uso rápido
 
@@ -143,20 +114,24 @@ print(match_id)  # 12557619
 ## Desarrollo
 
 ```bash
-# Activar entorno virtual
-source venv/bin/activate
+# Clonar el repositorio
+git clone https://github.com/jeke-deportivas/jekescore.git
+cd jekescore
 
-# Ejecutar linter
+# Crear y activar entorno virtual
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+# venv\Scripts\activate   # Windows
+
+# Instalar dependencias de desarrollo
+pip install -e ".[dev]"
+
+# Ejecutar linter y formatter
 ruff check .
-
-# Ejecutar formatter
 ruff format .
 
 # Ejecutar type checker
 pyright .
-
-# Ejecutar tests
-pytest
 
 # Ejecutar tests con coverage
 pytest --cov
