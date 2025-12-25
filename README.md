@@ -21,7 +21,7 @@ Requiere Python 3.13+
 from jekescore import get_shotmap
 
 # Obtener tiros de un partido
-shots = get_shotmap(match_id=12557619)
+shots = get_shotmap(match_id=14025220)
 
 # Iterar sobre los tiros
 for shot in shots:
@@ -46,10 +46,10 @@ Por defecto usa User-Agent de Windows. Puedes cambiarlo:
 from jekescore import get_shotmap
 
 # Para macOS
-shots = get_shotmap(match_id=12557619, platform="macos")
+shots = get_shotmap(match_id=14025220, platform="macos")
 
 # Para Linux
-shots = get_shotmap(match_id=12557619, platform="linux")
+shots = get_shotmap(match_id=14025220, platform="linux")
 ```
 
 ### Cookies (si hay problemas de acceso)
@@ -65,7 +65,7 @@ client = JekeScoreClient(cookies={"session": "abc123"})
 # Opción 2: Archivo JSON (exportado de Selenium o DevTools)
 client = JekeScoreClient(cookies_file="cookies.json")
 
-shots = client.get_shotmap(12557619)
+shots = client.get_shotmap(14025220)
 ```
 
 ## Estructura de datos
@@ -96,7 +96,7 @@ Las coordenadas están normalizadas:
 El `match_id` está en la URL del partido:
 
 ```
-https://www.sofascore.com/football/match/team1-team2/ABC#id:12557619
+https://www.sofascore.com/football/match/team1-team2/ABC#id:14025220
                                                           ^^^^^^^^
                                                           match_id
 ```
@@ -106,9 +106,9 @@ También puedes extraerlo programáticamente:
 ```python
 from jekescore import JekeScoreClient
 
-url = "https://www.sofascore.com/football/match/barcelona-atalanta/OgbsKgb#id:12557619"
+url = "https://www.sofascore.com/football/match/barcelona-atalanta/OgbsKgb#id:14025220"
 match_id = JekeScoreClient.get_match_id_from_url(url)
-print(match_id)  # 12557619
+print(match_id)  # 14025220
 ```
 
 ## Desarrollo
